@@ -2,43 +2,69 @@ doctype html
 html(lang="en")
 	head
 		title #{app.name} Manifest
+		style(type='text/css').
+			.text-pos {
+				padding: 5px;
+				word-wrap: break-word;
+				border-right: 2px solid #D9E4E6;
+				border-bottom: 2px solid #D9E4E6;
+			}
+			.app-text-pos {
+				text-align: center;
+			}
+			.table-style {
+				border: 2px solid #fff;
+				width: 100%;
+				border-collapse: collapse;
+				border-spacing: 2px;
+				border-color: grey;
+			}
+			.table-title {
+				background-color: #167F92;
+				border: 1px solid #D9E4E6;
+				color: #FFF;
+				padding: 5em;
+				text-align: center;
+				font-weight: bold;
+				font-size: 18px;
+			}
 	body
-		table
-			tr
+		table(class='table-style')
+			tr(class='table-title')
 				td #{app.name} Manifest
-			tr
+			tr(class='text-pos app-text-pos')
 				td
 					each val in app.version
 						span= 'Version :' + val
-			tr
+			tr(class='text-pos app-text-pos')
 				td
 					each val in app.license
 						span= 'License :' + val
-			tr
+			tr(class='text-pos app-text-pos')
 				td
 					each val in app.url
 						span= 'Url :' + val
-		div
-		table
-			tr
+		div(style='height:10px')
+		table(class='table-style')
+			tr(class='table-title')
 				th Module name
 				th Version
 				th License
 				th Url
 				th Path
-			tr
-				each app in deps
-					td #{app.name} Manifest
+			each app in deps
+				tr(class='text-pos')
+					td #{app.name}
 					td
 						each val in app.version
-							span= 'Version :' + val
+							div= val
 					td
 						each val in app.license
-							span= 'License :' + val
+							div= val
 					td
 						each val in app.url
-							span= 'Url :' + val
+							div= val
 					td
 						each val in app.path
-							span= 'Path :' + val
+							div= val
 					
