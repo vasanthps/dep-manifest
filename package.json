@@ -24,7 +24,8 @@
   },
   "homepage": "https://github.com/vasanthps/dep-manifest#readme",
   "dependencies": {
-    "jade": "^1.11.0"
+    "jade": "^1.11.0",
+    "minimist": "^1.2.0"
   },
   "preferGlobal": true,
   "bin": {
