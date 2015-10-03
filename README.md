@@ -10,6 +10,9 @@ You need to install it globally
 ```sh
 $ npm install -g dep-manifest
 ```
+
+### Running
+
 Move to your project root folder and run dep-manifest in the command line
 ```sh
 $ cd my_project_dir
