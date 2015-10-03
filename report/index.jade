@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+	head
+		title #{app.name} Manifest
+	body
+		table
+			tr
+				td #{app.name} Manifest
+			tr
+				td
+					each val in app.version
+						span= 'Version :' + val
+			tr
+				td
+					each val in app.license
+						span= 'License :' + val
+			tr
+				td
+					each val in app.url
+						span= 'Url :' + val
+		div
+		table
+			tr
+				th Module name
+				th Version
+				th License
+				th Url
+				th Path
+			tr
+				each app in deps
+					td #{app.name} Manifest
+					td
+						each val in app.version
+							span= 'Version :' + val
+					td
+						each val in app.license
+							span= 'License :' + val
+					td
+						each val in app.url
+							span= 'Url :' + val
+					td
+						each val in app.path
+							span= 'Path :' + val
+					

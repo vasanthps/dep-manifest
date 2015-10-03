@@ -24,6 +24,10 @@
   },
   "homepage": "https://github.com/vasanthps/dep-manifest#readme",
   "dependencies": {
-    "fs-extra": "^0.24.0"
+    "jade": "^1.11.0"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "dep-manifest": "index.js"
   }
 }
