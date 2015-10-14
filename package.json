@@ -1,6 +1,6 @@
 {
   "name": "dep-manifest",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Crawls through the app's dependencies and creates a report with the license information of all the dependencies",
   "main": "index.js",
   "scripts": {
